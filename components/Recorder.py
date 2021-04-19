@@ -52,8 +52,10 @@ class Recorder:
         # Stop and close the stream
         stream.stop_stream()
         stream.close()
-        # Terminate the PortAudio interface
-        self.p.terminate()
+        
+        # Terminate the PortAudio interface 
+        # (This leads to only one recodring being possible, commented out for now)
+        # self.p.terminate()
 
     def stop(self):
         print("stopping")
